@@ -1,10 +1,10 @@
 "$schema" = 'https://starship.rs/config-schema.json'
 
+add_newline = false
+
 format = """
-[](surface0)\
 $os\
 $username\
-[](fg:surface0)\
 $all\
 """
 
@@ -52,12 +52,9 @@ crust = "#11111b"
 
 [os]
 disabled = false
-style = "bg:surface0 fg:text"
 
 [username]
 show_always = true
-style_user = "bg:surface0 fg:text"
-style_root = "bg:surface0 fg:text"
 format = '[ $user]($style)'
 
 [directory]
@@ -105,9 +102,6 @@ symbol = " "
 
 [fennel]
 symbol = " "
-
-[fossil_branch]
-symbol = " "
 
 [golang]
 symbol = " "
@@ -239,3 +233,9 @@ symbol = " "
 
 [gradle]
 symbol = " "
+
+[character]
+disabled = false
+success_symbol = '[➜](bold green)'
+error_symbol = '[➜](bold fg:red)'
+vicmd_symbol = "[N] >>>"
