@@ -2,6 +2,12 @@
 
 add_newline = false
 
+format = """
+$os\
+$username\
+$all
+"""
+
 palette = 'catppuccin_mocha'
 
 [palettes.catppuccin_mocha]
@@ -32,13 +38,32 @@ base = "#1e1e2e"
 mantle = "#181825"
 crust = "#11111b"
 
+[os]
+disabled = false
+
+[username]
+style_user = 'white bold'
+style_root = 'black bold'
+format = '[$user]($style)@'
+disabled = false
+show_always = true
+
+[hostname]
+disabled = false
+ssh_symbol = "󰢹 "
+ssh_only = false
+format = '[$ssh_symbol]($style)[$hostname]($style) '
+
 [directory]
-style='blue'
+# style='blue'
+format = "[$path]($style) "
+truncation_length = 3
+truncation_symbol = "…/"
 
 [character]
 disabled = false
-success_symbol = '[➜](bold green)'
-error_symbol = '[➜](bold red)'
+success_symbol = '[\$](bold green)'
+error_symbol = '[\$](bold red)'
 vicmd_symbol = "[N] >>>"
 
 [aws]
@@ -88,9 +113,6 @@ symbol = " "
 
 [hg_branch]
 symbol = " "
-
-[hostname]
-ssh_symbol = "󰢹 "
 
 [java]
 symbol = " "
