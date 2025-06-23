@@ -5,7 +5,6 @@ add_newline = false
 format = """
 $os\
 $directory\
-$cmd_duration\
 $line_break\
 $character
 """
@@ -14,6 +13,7 @@ right_format = """
 $username\
 $hostname\
 $all\
+$cmd_duration\
 """
 
 [os]
@@ -125,7 +125,7 @@ symbol = "󰎙 "
 format = '[$symbol($version )]($style)'
 
 [git_branch]
-format = '[ $symbol$branch(:$remote_branch) ]($style)'
+format = '([\[$all_status$ahead_behind\]]($style) )'
 
 [git_status]
 format = '([\[$all_status\]]($style))'
