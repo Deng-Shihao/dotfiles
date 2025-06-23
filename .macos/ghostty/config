@@ -1,0 +1,28 @@
+theme = catppuccin-mocha
+
+# The first empty line clears our default
+font-family = ""
+font-family = "Berkeley Mono"
+font-size = 18
+
+# background-opacity = 0.85
+# background-blur = 30
+
+# icon
+macos-icon = glass
+
+# macos-titlebar-style = hidden
+window-padding-x = 5
+window-padding-y = 5
+window-padding-balance = true
+
+window-save-state = always
+# window-colorspace = display-p3
+
+# cursor-color
+cursor-style = block
+cursor-style-blink = true
+cursor-click-to-move = true
+cursor-invert-fg-bg = true
+
+macos-option-as-alt = true
