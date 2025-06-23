@@ -14,7 +14,6 @@ right_format = """
 $username\
 $hostname\
 $all\
-$time
 """
 
 [os]
@@ -36,11 +35,6 @@ format = '[$hostname]($style)[$ssh_symbol]($style) '
 [directory]
 format = "[$path]($style) "
 truncation_length = 3
-
-[time]
-disabled = false
-format = "[$time]($style)"
-time_format = "%R"
 
 [character]
 disabled = false
