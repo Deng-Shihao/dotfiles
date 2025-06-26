@@ -1,21 +1,22 @@
 theme = catppuccin-mocha
+# theme = OneHalfDark
+# theme = rose-pine-moon
 
-# The first empty line clears our default
-font-family = ""
+# Font
 font-family = "Berkeley Mono"
 font-size = 18
 
-background-opacity = 0.85
-background-blur = 30
+# Background
+background-opacity = 0.95
+background-blur = 20
 
 # icon
-macos-icon = glass
+# macos-icon = glass
 
 # macos-titlebar-style = hidden
 window-padding-x = 5
-window-padding-y = 5
+window-padding-y = 0
 window-padding-balance = true
-
 window-save-state = always
 # window-colorspace = display-p3
 
