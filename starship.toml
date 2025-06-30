@@ -4,43 +4,47 @@ add_newline = false
 
 format = """
 $os\
+$username\
+$hostname\
 $directory\
 $line_break\
 $character
 """
 
 right_format = """
-$username\
-$hostname\
 $all\
 $cmd_duration\
 """
 
-[os]
-disabled = false
+# [os]
+# disabled = false
 
 [line_break]
 disabled = true
 
 [username]
-# disabled = false
-# show_always = true
+disabled = false
+show_always = true
 format = '[$user]($style)@'
 
 [hostname]
-ssh_only = true
+ssh_only = false
+style = "blue bold"
 ssh_symbol = "󰢹 "
 format = '[$hostname]($style)[$ssh_symbol]($style) '
 
 [directory]
-format = "[$path]($style) "
+style = "green"
+format = "[$path]($style)"
 truncation_length = 3
 
 [character]
 disabled = false
-success_symbol = '[\$](bold green)'
-error_symbol = '[\$](bold red)'
-vimcmd_symbol = '[V](bold green)'
+success_symbol = '[>]()'
+error_symbol = '[>]()'
+vimcmd_symbol = '[V](green)'
+# success_symbol = '[\$](bold green)'
+# error_symbol = '[\$](bold red)'
 # success_symbol = '[➜](bold green)'
 # error_symbol = '[✗](bold red)'
 

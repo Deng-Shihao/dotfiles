@@ -41,6 +41,7 @@ alias ll='eza -l --icons'
 alias ls='eza --icons'
 alias ff='fastfetch'
 alias kssh='kitten ssh'
+alias gst='git status'
 
 # Completion
 zstyle ':completion:*' matcher-list 'm:{a-z}={A-Za-z}'
