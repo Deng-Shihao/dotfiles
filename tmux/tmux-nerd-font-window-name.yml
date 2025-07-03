@@ -1,19 +1,20 @@
 config:
-  # fallback-icon: "?" # show when no definition is found
+  fallback-icon: "" # show when no definition is found
   multi-pane-icon: "" # show when window has multiple panes (blank by default)
   show-name: true # show the window name with the icon (defaults to false)
   icon-position: "left" # show the icon to the "left" or "right" of the window name (defaults to left)
 
 icons:
-  nvim: ""
-  vim: ""
-  bash: ""
-  htop: "󰓅"
-  nvtop: ""
-  root: "󰦣"
-  lazygit: ""
-  less: ""
+  nvim: ""
+  vim: ""
+  bash: ""
+  zsh: ""
+  htop: ""
+  btop: ""
   yazi: "󰇥"
+  root: "󰦣"
+  lazygit: ""
+  less: ""
   python2.7: ""
   python3.10: ""
   python3.11: ""
