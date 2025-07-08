@@ -1,4 +1,4 @@
-# @Author Deng
+ # @Author Deng
 
 # Activate Plugins
 source $(brew --prefix)/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
@@ -11,9 +11,13 @@ eval "$(starship init zsh)"
 # Default Editor
 export EDITOR=nvim
 
+# Proxy
+# export https_proxy=http://127.0.0.1:7897 http_proxy=http://127.0.0.1:7897 all_proxy=socks5://127.0.0.1:7897
+
 # Brew
-# export HOMEBREW_API_DOMAIN="https://mirrors.tuna.tsinghua.edu.cn/homebrew-bottles/api"
-# export HOMEBREW_BOTTLE_DOMAIN="https://mirrors.tuna.tsinghua.edu.cn/homebrew-bottles"
+# export HOMEBREW_BOTTLE_DOMAIN=https://mirrors.tuna.tsinghua.edu.cn/homebrew-bottles
+# export HOMEBREW_BREW_GIT_REMOTE="https://mirrors.tuna.tsinghua.edu.cn/git/homebrew/brew.git"
+# export HOMEBREW_CORE_GIT_REMOTE="https://mirrors.tuna.tsinghua.edu.cn/git/homebrew/homebrew-core.git"
 
 # Load completions
 autoload -U compinit; compinit
@@ -38,7 +42,7 @@ bindkey '^n' history-search-forward
 alias ls='ls -F --color=auto'
 alias ll='ls -lF --color=auto'
 alias ll='eza -l --icons'
-alias ls='eza --icons'
+alias ls='eza --icons -T'
 alias ff='fastfetch'
 alias kssh='kitten ssh'
 alias gst='git status'

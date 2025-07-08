@@ -1,16 +1,15 @@
+# Theme
 theme = catppuccin-mocha
-# theme = OneHalfDark
-# theme = rose-pine-moon
 
 # Font
 font-family = "Berkeley Mono"
 font-size = 18
 
 # Background
-# background-opacity = 0.90
-# background-blur = 30
+background-opacity = 0.90
+background-blur = 30
 
-# icon
+# Icon
 # macos-icon = glass
 
 # Windows
@@ -21,10 +20,11 @@ window-save-state = always
 # window-padding-y = 0
 # window-colorspace = display-p3
 
-# cursor-color
+# Cursor-color
 cursor-style = block
 cursor-style-blink = true
 cursor-click-to-move = true
 cursor-invert-fg-bg = true
 
+# Keys
 macos-option-as-alt = true
