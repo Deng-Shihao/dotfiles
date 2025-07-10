@@ -4,20 +4,21 @@ add_newline = false
 
 format = """
 $os\
-$username\
+$username[@](bold)\
 $hostname\
 $directory\
 $git_branch\
 $git_status\
 $hg_branch\
 $pijul_channel\
+$all\
 $character\
 """
 
-right_format = """
-$cmd_duration\
-$all\
-"""
+# right_format = """
+# $cmd_duration\
+# $all\
+# """
 
 palette = 'catppuccin_mocha'
 [palettes.catppuccin_mocha]
@@ -48,20 +49,20 @@ base = "#1e1e2e"
 mantle = "#181825"
 crust = "#11111b"
 
-[line_break]
-disabled = true
+# [line_break]
+# disabled = true
 
 [os]
 disabled = false
 
 [username]
 disabled = false
-# show_always = true
+show_always = true
 style_user = 'green bold'
-format = '[$user]($style)@'
+format = '[$user]($style)'
 
 [hostname]
-# ssh_only = false
+ssh_only = false
 ssh_symbol = "󰢹 "
 style = 'blue bold'
 format = '[$hostname]($style)[$ssh_symbol]($style) '
@@ -73,12 +74,12 @@ truncation_length = 3
 
 [character]
 disabled = false
-success_symbol = '[❯](bold)'
+success_symbol = '[\$](bold pink)'
 error_symbol = '[✘](bold red)'
-vimcmd_symbol = '[❮](bold)'
-vimcmd_replace_one_symbol = '[❮](bold blue)'
-vimcmd_replace_symbol = '[❮](bold lavender)'
-vimcmd_visual_symbol = '[❮](bold yellow)'
+vimcmd_symbol = '[V](bold pink)'
+vimcmd_replace_one_symbol = '[V](bold blue)'
+vimcmd_replace_symbol = '[V](bold lavender)'
+vimcmd_visual_symbol = '[V](bold yellow)'
 
 # OS ICON
 [os.symbols]
@@ -161,6 +162,7 @@ symbol = "󰎙 "
 format = '[$symbol($version )]($style)'
 
 [git_branch]
+# style = "green bold"
 format = '[$symbol$branch(:$remote_branch) ]($style)'
 
 [git_status]

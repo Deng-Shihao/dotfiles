@@ -9,7 +9,11 @@ return {
       -- this setting is independent of vim.o.timeoutlen
       icons = {
         -- set icon mappings to true if you have a Nerd Font
-        mappings = vim.g.have_nerd_font,
+        breadcrumb = '»', -- symbol used in the command line area that shows your active key combo
+        separator = '➜', -- symbol used between a key and it's label
+        group = '+', -- symbol prepended to a group
+        ellipsis = '…',
+
         -- If you are using a Nerd Font: set icons.keys to an empty table which will use the
         -- default which-key.nvim defined Nerd Font icons, otherwise define a string table
         keys = vim.g.have_nerd_font and {} or {
@@ -46,8 +50,11 @@ return {
 
       -- Document existing key chains
       spec = {
+        { '<leader>c', group = 'code' },
         { '<leader>s', group = '[S]earch' },
+        { '<leader>f', group = 'file/find' },
         { '<leader>t', group = '[T]oggle' },
+        { '<leader>u', group = 'ui', icon = { icon = '󰙵 ', color = 'cyan' } },
         { '<leader>g', group = 'git' },
         { '<leader>h', group = 'Git [H]unk', mode = { 'n', 'v' } },
         { 'g', group = 'goto' },

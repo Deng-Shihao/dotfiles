@@ -39,14 +39,13 @@ bindkey '^p' history-search-backward
 bindkey '^n' history-search-forward
 
 # Aliases
+alias h='cd ..'
 alias ls='ls -F --color=auto'
 alias ll='ls -lF --color=auto'
 alias ll='eza -l --icons'
-alias ls='eza --icons -T'
+alias ls='eza --icons'
 alias ff='fastfetch'
-alias kssh='kitten ssh'
 alias gst='git status'
-alias h='cd ..'
 alias config='cd ~/.config'
 
 # Completion
