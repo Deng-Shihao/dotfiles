@@ -1,7 +1,7 @@
 # Activate Plugins
-[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 source /usr/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 source /usr/share/zsh-autosuggestions/zsh-autosuggestions.zsh
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 eval "$(starship init zsh)"
 
 # Load completions

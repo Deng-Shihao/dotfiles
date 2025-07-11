@@ -6,8 +6,8 @@ font-family = "Berkeley Mono"
 font-size = 18
 
 # Background
-background-opacity = 0.90
-background-blur = 30
+# background-opacity = 0.90
+# background-blur = 30
 
 # Icon
 # macos-icon = glass

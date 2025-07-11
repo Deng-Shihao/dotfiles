@@ -1,26 +1,17 @@
- # @Author Deng
-
+# @Author Deng
+ 
 # Activate Plugins
 source $(brew --prefix)/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 source $(brew --prefix)/share/zsh-autosuggestions/zsh-autosuggestions.zsh
+source ~/somewhere/fzf-tab.plugin.zsh # fzf-tab completion
 
-# fzf-tab completion
-source ~/somewhere/fzf-tab.plugin.zsh
-eval "$(starship init zsh)"
+eval "$(fzf --zsh)" # Fzf
+eval "$(starship init zsh)" # Starship
+
+autoload -U compinit; compinit # Load completions
 
 # Default Editor
 export EDITOR=nvim
-
-# Proxy
-# export https_proxy=http://127.0.0.1:7897 http_proxy=http://127.0.0.1:7897 all_proxy=socks5://127.0.0.1:7897
-
-# Brew
-# export HOMEBREW_BOTTLE_DOMAIN=https://mirrors.tuna.tsinghua.edu.cn/homebrew-bottles
-# export HOMEBREW_BREW_GIT_REMOTE="https://mirrors.tuna.tsinghua.edu.cn/git/homebrew/brew.git"
-# export HOMEBREW_CORE_GIT_REMOTE="https://mirrors.tuna.tsinghua.edu.cn/git/homebrew/homebrew-core.git"
-
-# Load completions
-autoload -U compinit; compinit
 
 # History
 HISTSIZE=5000
@@ -39,9 +30,8 @@ bindkey '^p' history-search-backward
 bindkey '^n' history-search-forward
 
 # Aliases
-alias h='cd ..'
-alias ls='ls -F --color=auto'
-alias ll='ls -lF --color=auto'
+alias bk='cd ..'
+alias c='clear'
 alias ll='eza -l --icons'
 alias ls='eza --icons'
 alias ff='fastfetch'
@@ -53,9 +43,6 @@ zstyle ':completion:*' matcher-list 'm:{a-z}={A-Za-z}'
 zstyle ':completion:*' list-colors 'di=34:ln=35:so=32:pi=33:ex=31:bd=46;34:cd=43;34:su=41;30:sg=46;30:tw=42;30:ow=43;30'
 zstyle ':completion:*' menu no
 # zstyle ':completion:*' list-colors ${(s.:.)LS_COLORS}
-
-# Shell integrations
-eval "$(fzf --zsh)"
 
 # Activete completion
 if type brew &>/dev/null; then
@@ -87,4 +74,3 @@ else
 fi
 unset __conda_setup
 # <<< conda initialize <<<
-    

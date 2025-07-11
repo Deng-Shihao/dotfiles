@@ -5,20 +5,21 @@ add_newline = false
 format = """
 $os\
 $username[@](bold)\
-$hostname\
+$hostname[:]()\
 $directory\
-$git_branch\
-$git_status\
-$hg_branch\
-$pijul_channel\
-$all\
 $character\
 """
 
-# right_format = """
-# $cmd_duration\
-# $all\
-# """
+right_format = """
+$cmd_duration\
+$all\
+"""
+
+# $git_branch\
+# $git_status\
+# $hg_branch\
+# $pijul_channel\
+
 
 palette = 'catppuccin_mocha'
 [palettes.catppuccin_mocha]
@@ -49,11 +50,11 @@ base = "#1e1e2e"
 mantle = "#181825"
 crust = "#11111b"
 
-# [line_break]
-# disabled = true
+[line_break]
+disabled = true
 
-[os]
-disabled = false
+# [os]
+# disabled = false
 
 [username]
 disabled = false
@@ -64,18 +65,18 @@ format = '[$user]($style)'
 [hostname]
 ssh_only = false
 ssh_symbol = "󰢹 "
-style = 'blue bold'
-format = '[$hostname]($style)[$ssh_symbol]($style) '
+style = 'lavender bold'
+format = '[$hostname]($style)[$ssh_symbol]($style)'
 
 [directory]
-style = 'green bold'
-format = '[$path]($style) '
+style = 'blue bold'
+format = '[$path]($style)'
 truncation_length = 3
 
 [character]
 disabled = false
 success_symbol = '[\$](bold pink)'
-error_symbol = '[✘](bold red)'
+error_symbol = '[\$](bold red)'
 vimcmd_symbol = '[V](bold pink)'
 vimcmd_replace_one_symbol = '[V](bold blue)'
 vimcmd_replace_symbol = '[V](bold lavender)'
@@ -162,11 +163,10 @@ symbol = "󰎙 "
 format = '[$symbol($version )]($style)'
 
 [git_branch]
-# style = "green bold"
 format = '[$symbol$branch(:$remote_branch) ]($style)'
 
 [git_status]
-format = '([$all_status$ahead_behind]($style) )'
+# format = '([[$all_status$ahead_behind]]($style) )'
 
 [hg_branch]
 format = '[$symbol$branch(:$topic)]($style)'
