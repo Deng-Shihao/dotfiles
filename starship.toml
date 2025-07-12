@@ -77,8 +77,8 @@ truncation_length = 3
 disabled = false
 success_symbol = '[\$](bold pink)'
 error_symbol = '[\$](bold red)'
-vimcmd_symbol = '[V](bold pink)'
-vimcmd_replace_one_symbol = '[V](bold blue)'
+vimcmd_symbol = '[\$>](bold pink)'
+vimcmd_replace_one_symbol = '[\$>](bold blue)'
 vimcmd_replace_symbol = '[V](bold lavender)'
 vimcmd_visual_symbol = '[V](bold yellow)'
 
@@ -160,7 +160,7 @@ format = '[$symbol($version )]($style)'
 
 [nodejs]
 symbol = "󰎙 "
-format = '[$symbol($version )]($style)'
+format = '[$symbol($version)]($style)'
 
 [git_branch]
 format = '[$symbol$branch(:$remote_branch) ]($style)'

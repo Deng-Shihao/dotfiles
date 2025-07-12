@@ -13,9 +13,9 @@ font-size = 18
 # macos-icon = glass
 
 # Windows
-macos-titlebar-style = hidden
 window-padding-balance = true
 window-save-state = always
+# macos-titlebar-style = hidden
 # window-padding-x = 5
 # window-padding-y = 0
 # window-colorspace = display-p3
