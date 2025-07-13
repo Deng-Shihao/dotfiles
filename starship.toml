@@ -4,7 +4,7 @@ add_newline = false
 
 format = """
 $os\
-$username[@](bold)\
+$username[@](bold pink)\
 $hostname[:]()\
 $directory\
 $character\
@@ -19,7 +19,6 @@ $all\
 # $git_status\
 # $hg_branch\
 # $pijul_channel\
-
 
 palette = 'catppuccin_mocha'
 [palettes.catppuccin_mocha]
@@ -65,12 +64,12 @@ format = '[$user]($style)'
 [hostname]
 ssh_only = false
 ssh_symbol = "󰢹 "
-style = 'lavender bold'
+style = 'blue bold'
 format = '[$hostname]($style)[$ssh_symbol]($style)'
 
 [directory]
-style = 'blue bold'
-format = '[$path]($style)'
+style = 'green bold'
+format = '[$path]($style) '
 truncation_length = 3
 
 [character]

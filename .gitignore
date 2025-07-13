@@ -1,2 +1,5 @@
 .DS_Store
 clash-verge
+configstore
+yazi/plugins
+nvim/lazy-lock.json
