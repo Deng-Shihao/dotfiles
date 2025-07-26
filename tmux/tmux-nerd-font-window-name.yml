@@ -6,6 +6,8 @@ config:
 
 icons:
   nvim: ""
+  eza: ""
+  cmatrix: "󰘨"
   vim: ""
   ssh: "󰢹"
   bash: ""

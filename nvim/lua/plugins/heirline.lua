@@ -5,13 +5,17 @@ return {
   opts = function()
     local lib = require 'heirline-components.all'
     return {
+      tabline = { -- UI upper bar
+        lib.component.tabline_conditional_padding(),
+        lib.component.tabline_buffers(),
+        lib.component.fill { hl = { bg = 'tabline_bg' } },
+        lib.component.tabline_tabpages(),
+      },
       statusline = { -- UI statusbar
         hl = { fg = 'fg', bg = 'bg' },
         lib.component.mode(),
         lib.component.file_info {
-          file_icon = { -- if set, displays a icon depending the current filetype.
-            padding = { left = 0, right = 1 },
-          },
+          file_icon = { padding = { left = 0, right = 1 } },
           filename = {},
           filetype = false,
           file_modified = false,

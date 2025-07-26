@@ -1,24 +1,21 @@
 # Theme
 theme = catppuccin-mocha
 
+# Shaders
+# custom-shader = ./shaders/cursor_smear_fade.glsl
+
 # Font
-font-family = "Berkeley Mono"
+font-family = "JetBrainsMono Nerd Font"
 font-size = 18
 
 # Background
-# background-opacity = 0.90
-# background-blur = 30
-
-# Icon
-# macos-icon = glass
+background-opacity = 0.90
+background-blur = 30
 
 # Windows
 window-padding-balance = true
 window-save-state = always
-# macos-titlebar-style = hidden
-# window-padding-x = 5
-# window-padding-y = 0
-# window-colorspace = display-p3
+macos-titlebar-style = hidden
 
 # Cursor-color
 cursor-style = block

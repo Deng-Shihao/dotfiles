@@ -1,22 +1,16 @@
 "$schema" = 'https://starship.rs/config-schema.json'
-
 add_newline = false
 
 format = """
 $os\
-$username[@](bold pink)\
+$username[@](bold)\
 $hostname[:]()\
 $directory\
+$all\
 $character\
 """
 
-right_format = """
-$cmd_duration\
-$all\
-"""
-
 # $git_branch\
-# $git_status\
 # $hg_branch\
 # $pijul_channel\
 
@@ -49,16 +43,16 @@ base = "#1e1e2e"
 mantle = "#181825"
 crust = "#11111b"
 
-[line_break]
-disabled = true
+# [line_break]
+# disabled = true
 
-# [os]
-# disabled = false
+[os]
+disabled = false
 
 [username]
 disabled = false
 show_always = true
-style_user = 'green bold'
+# style_user = 'green bold'
 format = '[$user]($style)'
 
 [hostname]
@@ -68,18 +62,17 @@ style = 'blue bold'
 format = '[$hostname]($style)[$ssh_symbol]($style)'
 
 [directory]
-style = 'green bold'
+# style = 'blue bold'
 format = '[$path]($style) '
 truncation_length = 3
 
-[character]
-disabled = false
-success_symbol = '[\$](bold pink)'
-error_symbol = '[\$](bold red)'
-vimcmd_symbol = '[\$>](bold pink)'
-vimcmd_replace_one_symbol = '[\$>](bold blue)'
-vimcmd_replace_symbol = '[V](bold lavender)'
-vimcmd_visual_symbol = '[V](bold yellow)'
+# [character]
+# success_symbol = '[\$](bold green)'
+# error_symbol = '[\$](bold red)'
+# vimcmd_symbol = '[\$>](bold green)'
+# vimcmd_replace_one_symbol = '[\$>](bold blue)'
+# vimcmd_replace_symbol = '[V](bold lavender)'
+# vimcmd_visual_symbol = '[V](bold yellow)'
 
 # OS ICON
 [os.symbols]
@@ -138,20 +131,24 @@ format = '[$symbol($version(-$name) )]($style)'
 symbol = " "
 format = '[$symbol($version(-$name) )]($style)'
 
+[lua]
+symbol = " "
+format = '[$symbol($version )]($style)'
+
 [java]
 symbol = " "
 format = '[${symbol}(${version} )]($style)'
 
 [cmake]
-format = '[$symbol($version)]($style)'
+format = '[$symbol($version)]($style) '
 
 [conda]
 symbol = " "
-format = '[$symbol$environment]($style) '
+format = '[$symbol$environment]($style)'
 
 [docker_context]
 symbol = " "
-format = '[$symbol$context]($style) '
+format = '[$symbol$context]($style)'
 
 [python]
 symbol = " "
@@ -163,9 +160,6 @@ format = '[$symbol($version)]($style)'
 
 [git_branch]
 format = '[$symbol$branch(:$remote_branch) ]($style)'
-
-[git_status]
-# format = '([[$all_status$ahead_behind]]($style) )'
 
 [hg_branch]
 format = '[$symbol$branch(:$topic)]($style)'
@@ -211,9 +205,6 @@ symbol = " "
 
 [kotlin]
 symbol = " "
-
-[lua]
-symbol = " "
 
 [memory_usage]
 symbol = "󰍛 "
