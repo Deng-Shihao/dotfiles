@@ -2,20 +2,23 @@
 theme = catppuccin-mocha
 
 # Shaders
-# custom-shader = ./shaders/cursor_smear_fade.glsl
+# custom-shader = ./shaders/cursor_trailing.glsl
 
 # Font
-font-family = "JetBrainsMono Nerd Font"
+font-family = "Berkeley Mono"
 font-size = 18
+font-thicken = true
+# font-thicken-strength
 
 # Background
-background-opacity = 0.90
-background-blur = 30
+background-opacity = 0.95
+background-blur = 20
 
 # Windows
 window-padding-balance = true
 window-save-state = always
 macos-titlebar-style = hidden
+window-colorspace = display-p3
 
 # Cursor-color
 cursor-style = block
@@ -25,3 +28,6 @@ cursor-invert-fg-bg = true
 
 # Keys
 macos-option-as-alt = true
+
+# Icon
+# macos-icon = retro

@@ -1,8 +1,7 @@
 -- [[ Basic Keymaps ]]
 local map = vim.keymap.set
 
--- Clear highlights on search when pressing <Esc> in normal mode
-map('n', '<Esc>', '<cmd>nohlsearch<CR>')
+-- Clear highlights on search when pressing <Esc> in normal mode map('n', '<Esc>', '<cmd>nohlsearch<CR>')
 map('i', 'jk', '<ESC>', { silent = true })
 
 -- Diagnostic keymaps
@@ -38,6 +37,7 @@ vim.keymap.del('n', 'gri')
 vim.keymap.del('n', 'grn')
 vim.keymap.del('n', 'grr')
 vim.keymap.del('n', 'grt')
+vim.keymap.del('n', 'gO')
 
 -- TIP: Disable arrow keys in normal mode
 -- vim.keymap.set('n', '<left>', '<cmd>echo "Use h to move!!"<CR>')

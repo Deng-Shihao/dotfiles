@@ -24,8 +24,8 @@ return {
     keymap = {
       preset = 'enter',
       ['<C-y>'] = { 'select_and_accept' },
-      ['<C-u>'] = { 'scroll_documentation_up', 'fallback' },
-      ['<C-d>'] = { 'scroll_documentation_down', 'fallback' },
+      -- ['<C-u>'] = { 'scroll_documentation_up', 'fallback' },
+      -- ['<C-d>'] = { 'scroll_documentation_down', 'fallback' },
     },
     -- cmdline = { completion = { menu = { auto_show = false } } },
     completion = {

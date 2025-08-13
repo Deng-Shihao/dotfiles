@@ -5,12 +5,12 @@
 # since 2024 2025
 
 if [[ -x $(command -v eza) ]]; then
-  alias l.='eza --icons=auto -a'
-  alias ls='eza --icons=auto'
-  alias ll='eza --icons=auto --long -a --sort=type'
+  alias l.='eza -a'
+  alias ls='eza -F --sort=type'
+  alias ll='eza -aF --long --sort=type'
 else
   alias ls='ls -F --color=auto'
-  alias ll='ls -alhF'
+  alias ll='ls -alhF --color=auto'
 fi
 
 alias ~='cd ~'

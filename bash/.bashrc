@@ -12,6 +12,7 @@ esac
 
 # Default Editor
 export EDITOR=nvim
+export PATH="/opt/homebrew/opt/coreutils/libexec/gnubin:$PATH"
 
 # History Control
 HISTCONTROL=ignoreboth
@@ -21,6 +22,9 @@ shopt -s histappend
 
 # Aliases
 [ -f "$HOME/.config/bash/.bash_aliases" ] && . "$HOME/.config/bash/.bash_aliases"
+
+# dircolors
+# [ -f "$HOME/.config/bash/dircolors" ] && eval $(dircolors -b "$HOME/.config/bash/dircolors")
 
 # Fzf
 export FZF_DEFAULT_COMMAND="rg --files"

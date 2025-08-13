@@ -62,7 +62,7 @@ style = 'blue bold'
 format = '[$hostname]($style)[$ssh_symbol]($style)'
 
 [directory]
-# style = 'blue bold'
+style = 'green bold'
 format = '[$path]($style) '
 truncation_length = 3
 
