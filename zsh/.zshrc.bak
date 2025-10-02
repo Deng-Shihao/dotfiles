@@ -1,0 +1,65 @@
+# .zshrc
+# @author deng
+# since 2024 2025
+
+# Start the profiler at the top of the .zshrc
+zmodload zsh/zprof
+
+# Check for interactive shell. If not, don't load anything.
+case $- in # check shell options
+    *i*) ;; # interactive shell
+      *) return;; # don't do anything
+esac
+
+# Core Configuration
+# PATH, EDITOR, and History
+export EDITOR=nvim
+export PATH="/opt/homebrew/opt/coreutils/libexec/gnubin:$PATH"
+
+# History
+HISTSIZE=2000
+SAVEHIST=$HISTSIZE
+HISTFILE=$HOME/.zsh_history
+setopt append_history share_history hist_ignore_space hist_save_no_dups hist_ignore_dups hist_find_no_dups
+
+# Aliases
+[ -f "$HOME/.config/zsh/.zsh_aliases" ] && . "$HOME/.config/zsh/.zsh_aliases"
+
+# Plugins and Autocompletion
+autoload -Uz compinit && compinit -C # Load completions
+
+# Load plugins.
+source $(brew --prefix)/share/zsh-autosuggestions/zsh-autosuggestions.zsh
+
+# Load zsh-syntax-highlighting.
+source /opt/homebrew/opt/zsh-fast-syntax-highlighting/share/zsh-fast-syntax-highlighting/fast-syntax-highlighting.plugin.zsh
+
+# fzf-tab
+source ~/somewhere/fzf-tab.plugin.zsh
+
+# Starship prompt.
+[ -x "$(command -v starship)" ] && eval "$(starship init zsh)"
+
+# Keybindings
+bindkey '^p' history-search-backward
+bindkey '^n' history-search-forward
+bindkey '^A' vi-beginning-of-line
+bindkey '^E' vi-end-of-line
+
+
+# Completion Styles
+zstyle ':completion:*' matcher-list 'm:{a-z}={A-Za-z}'
+zstyle ':completion:*' list-colors 'di=34:ln=35:so=32:pi=33:ex=31:bd=46;34:cd=43;34:su=41;30:sg=46;30:tw=42;30:ow=43;30'
+zstyle ':completion:*' menu no
+zstyle ':fzf-tab:complete:cd:*' fzf-preview 'ls --color $realpath'
+zstyle ':fzf-tab:*' use-fzf-default-opts yes
+
+# FZF Configuration. Place after all other plugins.
+export FZF_DEFAULT_COMMAND="rg --files"
+export FZF_DEFAULT_OPTS='--layout reverse'
+export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
+source <(fzf --zsh) fzf
+
+eval "$(zoxide init --cmd cd zsh)"
+
+zprof

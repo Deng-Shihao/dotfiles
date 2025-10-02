@@ -1,4 +1,3 @@
-"$schema" = 'https://starship.rs/config-schema.json'
 add_newline = false
 
 format = """
@@ -6,11 +5,18 @@ $os\
 $username[@](bold)\
 $hostname[:]()\
 $directory\
-$all\
 $character\
 """
 
+right_format= """
+$all\
+"""
+
 # $git_branch\
+# $git_commit\
+# $git_state\
+# $git_metrics\
+# $git_status\
 # $hg_branch\
 # $pijul_channel\
 
@@ -43,16 +49,16 @@ base = "#1e1e2e"
 mantle = "#181825"
 crust = "#11111b"
 
-# [line_break]
-# disabled = true
+[line_break]
+disabled = false
 
 [os]
 disabled = false
+format = '[$symbol]($style)'
 
 [username]
 disabled = false
 show_always = true
-# style_user = 'green bold'
 format = '[$user]($style)'
 
 [hostname]
@@ -62,17 +68,13 @@ style = 'blue bold'
 format = '[$hostname]($style)[$ssh_symbol]($style)'
 
 [directory]
-style = 'green bold'
+# style = 'green bold'
 format = '[$path]($style) '
 truncation_length = 3
 
-# [character]
-# success_symbol = '[\$](bold green)'
-# error_symbol = '[\$](bold red)'
-# vimcmd_symbol = '[\$>](bold green)'
-# vimcmd_replace_one_symbol = '[\$>](bold blue)'
-# vimcmd_replace_symbol = '[V](bold lavender)'
-# vimcmd_visual_symbol = '[V](bold yellow)'
+[character]
+success_symbol = '[➔](bold green)'
+error_symbol = '[✘](bold red)'
 
 # OS ICON
 [os.symbols]
@@ -144,15 +146,15 @@ format = '[$symbol($version)]($style) '
 
 [conda]
 symbol = " "
-format = '[$symbol$environment]($style)'
+format = '[$symbol$environment]($style) '
 
 [docker_context]
 symbol = " "
-format = '[$symbol$context]($style)'
+format = '[$symbol$context]($style) '
 
 [python]
 symbol = " "
-format = '[$symbol($version )]($style)'
+format = '[${symbol}${pyenv_prefix}(${version} )(\($virtualenv\) )]($style)'
 
 [nodejs]
 symbol = "󰎙 "
@@ -168,7 +170,7 @@ format = '[$symbol$branch(:$topic)]($style)'
 format = '[$symbol$channel]($style)'
 
 [aws]
-symbol = "  "
+symbol = " "
 
 [buf]
 symbol = " "
@@ -206,9 +208,6 @@ symbol = " "
 [kotlin]
 symbol = " "
 
-[memory_usage]
-symbol = "󰍛 "
-
 [meson]
 symbol = "󰔷 "
 
@@ -223,6 +222,7 @@ symbol = " "
 
 [package]
 symbol = "󰏗 "
+format = '[$symbol$version]($style) '
 
 [perl]
 symbol = " "

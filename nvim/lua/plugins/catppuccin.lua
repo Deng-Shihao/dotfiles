@@ -16,10 +16,38 @@ return {
         shade = 'dark',
         percentage = 0.15, -- percentage of the shade to apply to the inactive window
       },
-      -- no_bold = true, -- Force no bold
       -- no_underline = true, -- Force no underline
       no_italic = true, -- Force no italic
       auto_integrations = true,
+      integrations = {
+        cmp = true,
+        nvimtree = true,
+        treesitter = true,
+        notify = true,
+        noice = true,
+        dashboard = true,
+        flash = true,
+        fzf = true,
+        lsp_saga = true,
+        mason = true,
+        notifier = true,
+        which_key = true,
+        snacks = {
+          enabled = true,
+          indent_scope_color = '', -- catppuccin color (eg. `lavender`) Default: text
+        },
+        gitsigns = {
+          enabled = true,
+          transparent = true,
+        },
+        mini = {
+          enabled = true,
+          indentscope_color = '',
+        },
+        blink_cmp = {
+          style = 'bordered',
+        },
+      },
       highlight_overrides = {
         mocha = function(mocha)
           return {

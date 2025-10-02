@@ -5,6 +5,7 @@ vim.lsp.enable {
   'pyright',
   'marksman',
   'ruff',
+  'cmake-language-server',
 }
 
 -- LSP servers are automatically managed by Mason

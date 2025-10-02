@@ -27,7 +27,7 @@ return {
         },
       },
     },
-    explorer = { enabled = false },
+    explorer = { enabled = true },
     indent = { enabled = true },
     input = { enabled = true },
     notifier = {
@@ -91,14 +91,14 @@ return {
       end,
       desc = 'Notification History',
     },
-    -- {
-    --   '<leader>e',
-    --   function()
-    --     Snacks.explorer()
-    --   end,
-    --   desc = 'File Explorer',
-    -- },
-    -- -- find
+    {
+      '<leader>e',
+      function()
+        Snacks.explorer()
+      end,
+      desc = 'File Explorer',
+    },
+    -- find
     {
       '<leader>fb',
       function()
