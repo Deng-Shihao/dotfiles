@@ -78,3 +78,6 @@ eval "$(fzf --zsh)"
 eval "$(zoxide init --cmd cd zsh)"
 
 # zprof
+
+# Java
+export PATH="/opt/homebrew/opt/openjdk@21/bin:$PATH"

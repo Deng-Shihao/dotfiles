@@ -3,3 +3,4 @@ clash-verge
 configstore
 yazi/plugins
 nvim/lazy-lock.json
+gh/*

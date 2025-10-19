@@ -5,13 +5,13 @@ theme = Catppuccin Mocha
 custom-shader = ./shaders/cursor_smear.glsl
 
 # Font
-font-family = "Berkeley Mono"
+font-family = "JetBrains Mono"
 font-family = "Maple Mono NF CN"
 font-size = 18
-font-thicken = true
+# font-thicken = true
 
 # Background
-background-opacity = 0.80
+background-opacity = 0.95
 background-blur = 30
 
 # Windows
@@ -24,11 +24,11 @@ window-colorspace = display-p3
 cursor-style = block
 cursor-style-blink = false
 cursor-click-to-move = true
-cursor-invert-fg-bg = true
 shell-integration-features = no-cursor
+# cursor-invert-fg-bg = true
 
 # Keys
 macos-option-as-alt = true
 
 # Icon
-# macos-icon = retro
+# macos-icon = glass

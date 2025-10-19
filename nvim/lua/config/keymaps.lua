@@ -34,7 +34,7 @@ map({ 'n', 'x' }, 'ga', vim.lsp.buf.code_action, { desc = 'Goto Code Action' })
 
 --NOTE: Save file
 map({ 'i', 'x', 'n', 's' }, '<D-s>', '<cmd>w<cr><esc>', { desc = 'Save file' })
-map({ 'i', 'x', 'n', 's' }, '<leader>w', '<cmd>w<cr><esc>', { desc = 'Save file' })
+-- map({ 'i', 'x', 'n', 's' }, '<leader>w', '<cmd>w<cr><esc>', { desc = 'Save file' })
 
 vim.keymap.del('n', 'gra')
 vim.keymap.del('n', 'gri')
