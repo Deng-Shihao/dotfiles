@@ -6,6 +6,7 @@ vim.lsp.enable {
   'marksman',
   'ruff',
   'cmake-language-server',
+  'jdtls',
 }
 
 -- LSP servers are automatically managed by Mason

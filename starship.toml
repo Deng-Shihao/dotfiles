@@ -1,21 +1,17 @@
 add_newline = false
 
 format = """
+$os\
 $username[@](bold)\
-$hostname\
+$hostname[:](bold)\
 $directory\
-$git_branch\
-$git_commit\
-$git_state\
-$git_metrics\
-$hg_branch\
-$pijul_channel\
+$all\
 $character\
 """
 
-right_format= """
-$all\
-"""
+# right_format= """
+# $all\
+# """
 
 palette = 'catppuccin_mocha'
 [palettes.catppuccin_mocha]
@@ -46,12 +42,9 @@ base = "#1e1e2e"
 mantle = "#181825"
 crust = "#11111b"
 
-[line_break]
-disabled = true
-
-# [os]
-# disabled = false
-# format = '[$symbol]($style)'
+[os]
+disabled = false
+format = '[$symbol]($style)'
 
 [username]
 disabled = false
@@ -62,17 +55,21 @@ format = '[$user]($style)'
 [hostname]
 ssh_only = false
 ssh_symbol = "󰢹 "
-style = 'bold'
-format = '[$hostname]($style)[$ssh_symbol]($style) '
+style = 'bold blue'
+format = '[$hostname]($style)[$ssh_symbol]($style)'
 
 [directory]
 style = 'bold green'
-format = '[$path]($style)'
+format = '[$path]($style) '
 truncation_length = 3
 
 [character]
-success_symbol = '[>](bold)'
-error_symbol = '[>](red bold)'
+success_symbol = '[➔](bold green)'
+error_symbol = '[✘](bold red)'
+# success_symbol = '[\$](bold)'
+# error_symbol = '[\$](red bold)'
+# vimcmd_symbol = '[V](bold green) '
+
 
 # OS ICON
 [os.symbols]
@@ -160,7 +157,7 @@ format = '[$symbol($version)]($style)'
 
 [git_branch]
 symbol = ''
-format = ' [\($branch\)(:$remote_branch)]($style)'
+format = '[\($branch\)(:$remote_branch)]($style) '
 
 [hg_branch]
 format = '[$symbol$branch(:$topic)]($style)'

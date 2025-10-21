@@ -84,6 +84,7 @@ vim.o.confirm = true
 
 -- Display tabline
 vim.opt.showtabline = 2
+vim.opt.termguicolors = true
 
 -- Intend
 vim.opt.autoindent = true
