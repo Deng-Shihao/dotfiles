@@ -24,15 +24,13 @@ return {
     keymap = {
       preset = 'enter',
       ['<C-y>'] = { 'select_and_accept' },
-      -- ['<C-u>'] = { 'scroll_documentation_up', 'fallback' },
-      -- ['<C-d>'] = { 'scroll_documentation_down', 'fallback' },
     },
-    -- cmdline = { completion = { menu = { auto_show = false } } },
+    cmdline = { completion = { menu = { auto_show = false } } },
     completion = {
-      menu = { border = 'rounded' },
+      -- menu = { border = 'rounded' },
       documentation = {
         window = {
-          border = 'rounded',
+          -- border = 'rounded',
         },
         auto_show = true,
       },
@@ -53,7 +51,7 @@ return {
     -- Shows a signature help window while you type arguments for a function
     signature = {
       enabled = true,
-      window = { border = 'rounded' },
+      -- window = { border = 'rounded' },
     },
   },
 }

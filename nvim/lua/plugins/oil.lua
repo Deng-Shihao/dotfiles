@@ -15,10 +15,14 @@ return {
       ['q'] = { 'actions.close', mode = 'n' },
       ['<leader>e'] = { 'actions.close', mode = 'n' },
     },
+    -- Configuration for the floating window in oil.open_float
+    float = {
+      border = { '╭', '─', '╮', '│', '╯', '─', '╰', '│' },
+    },
   },
   keys = {
     { '-', '<cmd>Oil<cr>', desc = 'Open parent directory' },
-    { '<leader>-', '<cmd>Oil --float<cr>', desc = 'Open parent float' },
+    -- { '<leader>-', '<cmd>Oil --float<cr>', desc = 'Open parent float' },
     -- { '<leader>e', '<cmd>Oil --float<cr>', desc = 'Open parent float' },
   },
 }

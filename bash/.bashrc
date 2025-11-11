@@ -19,6 +19,7 @@ HISTCONTROL=ignoreboth
 HISTSIZE=2000
 SAVEHIST=$HISTSIZE
 shopt -s histappend
+shopt -s checkwinsize
 
 # Aliases
 [ -f "$HOME/.config/bash/.bash_aliases" ] && . "$HOME/.config/bash/.bash_aliases"

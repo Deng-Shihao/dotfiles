@@ -1,5 +1,6 @@
 return {
   'catppuccin/nvim',
+  -- enabled = false,
   name = 'catppuccin',
   lazy = false,
   priority = 1000, -- Make sure to load this before all the other start plugins.
@@ -17,7 +18,7 @@ return {
         percentage = 0.15, -- percentage of the shade to apply to the inactive window
       },
       -- no_underline = true, -- Force no underline
-      -- no_italic = true, -- Force no italic
+      no_italic = true, -- Force no italic
       auto_integrations = true,
       integrations = {
         cmp = true,
@@ -56,6 +57,6 @@ return {
         end,
       },
     }
-    vim.cmd.colorscheme 'catppuccin'
+    -- vim.cmd.colorscheme 'catppuccin'
   end,
 }

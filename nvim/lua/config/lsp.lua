@@ -3,10 +3,10 @@ vim.lsp.enable {
   'lua_ls',
   'clangd',
   'pyright',
+  'jdtls',
   'marksman',
   'ruff',
   'cmake-language-server',
-  'jdtls',
 }
 
 -- LSP servers are automatically managed by Mason
