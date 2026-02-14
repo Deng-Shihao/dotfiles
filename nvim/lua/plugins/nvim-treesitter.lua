@@ -5,6 +5,7 @@ return {
   opts = {
     ensure_installed = { 'bash', 'c', 'diff', 'html', 'lua', 'luadoc', 'markdown', 'markdown_inline', 'query', 'vim', 'vimdoc' },
     vim.treesitter.language.register('bash', 'zsh'),
+    vim.treesitter.language.register('bash', 'fish'),
     -- Autoinstall languages that are not installed
     auto_install = true,
     highlight = {

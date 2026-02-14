@@ -1,5 +1,4 @@
-local palette = require 'rose-pine.palette'
--- local palette = require('catppuccin.palettes').get_palette 'mocha'
+local palette = require('catppuccin.palettes').get_palette 'mocha'
 local utils = require 'heirline.utils'
 local conditions = require 'heirline.conditions'
 local icons = require 'plugins.heirline.icons'
@@ -17,21 +16,20 @@ local colors = {
 local dim_color = palette.surface1
 
 -- overseer
-local function OverseerTasksForStatus(st)
-  return {
-    condition = function(self)
-      return self.tasks[st]
-    end,
-    provider = function(self)
-      return string.format('%s%d', self.symbols[st], #self.tasks[st])
-    end,
-    hl = function(_)
-      return {
-        fg = utils.get_highlight(string.format('Overseer%s', st)).fg,
-      }
-    end,
-  }
-end
+-- local function OverseerTasksForStatus(st)
+--   return {
+--     condition = function(self)
+--       return self.tasks[st]
+--     end,
+--     provider = function(self) return string.format('%s%d', self.symbols[st], #self.tasks[st])
+--     end,
+--     hl = function(_)
+--       return {
+--         fg = utils.get_highlight(string.format('Overseer%s', st)).fg,
+--       }
+--     end,
+--   }
+-- end
 
 local M = {}
 M.Spacer = { provider = ' ' }
@@ -41,8 +39,9 @@ M.Ruler = {
   -- %L = number of lines in the buffer
   -- %c = column number
   -- %P = percentage through file of displayed window
-  provider = '%4l,%-3c %P',
+  provider = '%4l,%-3c%L %P',
 }
+
 M.ScrollBar = {
   static = {
     sbar = { '▁', '▂', '▃', '▄', '▅', '▆', '▇', '█' },
@@ -125,21 +124,21 @@ M.Mode = {
     },
 
     mode_colors = {
-      n = palette.rose,
+      n = palette.blue,
       nt = dim_color,
 
-      i = palette.foam,
-      v = palette.iris,
-      V = palette.iris,
-      ['\22'] = palette.iris,
-      c = palette.love,
+      i = palette.green,
+      v = palette.mauve,
+      V = palette.mauve,
+      ['\22'] = palette.mauve,
+      c = palette.red,
       s = palette.pink,
       S = palette.pink,
       ['\19'] = palette.pink,
       R = palette.peach,
       r = palette.peach,
       ['!'] = palette.red,
-      t = palette.foam,
+      t = palette.blue,
     },
   },
   provider = function(self)
@@ -216,7 +215,7 @@ M.LSPActive = {
     return '[' .. table.concat(names, ' ') .. '] '
     -- return table.concat(names, ', ')
   end,
-  hl = { fg = palette.gold, bold = true },
+  hl = { fg = palette.green, bold = true },
   -- on_click = {
   --   name = 'heirline_lsp',
   --   callback = function()
@@ -270,7 +269,8 @@ M.Git = {
   end,
 
   hl = function(self)
-    return { fg = self.has_changes and palette.love or dim_color }
+    return { fg = palette.pink }
+    -- return { fg = self.has_changes and palette.foam or dim_color }
   end,
 
   { -- git branch name
@@ -294,21 +294,21 @@ M.Git = {
       local count = self.status_dict.added or 0
       return count > 0 and ('+' .. count)
     end,
-    hl = { fg = palette.foam },
+    hl = { fg = palette.green },
   },
   {
     provider = function(self)
       local count = self.status_dict.removed or 0
       return count > 0 and ('-' .. count)
     end,
-    hl = { fg = palette.love },
+    hl = { fg = palette.red },
   },
   {
     provider = function(self)
       local count = self.status_dict.changed or 0
       return count > 0 and ('~' .. count)
     end,
-    hl = { fg = palette.gold },
+    hl = { fg = palette.yellow },
   },
 
   {
@@ -434,22 +434,13 @@ M.FileName = {
   end,
 }
 
--- we redefine the filename component, as we probably only want the tail and not the relative path
 M.FilePath = {
   provider = function(self)
-    -- first, trim the pattern relative to the current directory. For other
-    -- options, see :h filename-modifers
-    local filename = vim.fn.fnamemodify(self.filename, ':.')
-    if filename == '' then
+    local filepath = vim.fn.fnamemodify(self.filename, ':.h')
+    if filepath == '' then
       return vim.bo.filetype ~= '' and vim.bo.filetype or vim.bo.buftype
     end
-    -- now, if the filename would occupy more than 1/4th of the available
-    -- space, we trim the file path to its initials
-    -- See Flexible Components section below for dynamic truncation
-    -- if not conditions.width_percent_below(#filename, 0.25) then
-    --   filename = vim.fn.pathshorten(filename, 4)
-    -- end
-    return filename
+    return filepath
   end,
   hl = function(self)
     return {
@@ -487,7 +478,7 @@ M.FileFlags = {
       end
       return result
     end,
-    provider = '  ',
+    provider = ' + ',
     hl = function(self)
       return { fg = self.icon_color, bold = self.is_active }
     end,
@@ -546,10 +537,10 @@ M.FilePathBlock = {
     local bufnr = self.bufnr and self.bufnr or 0
     self.filename = vim.api.nvim_buf_get_name(bufnr)
   end,
-  hl = { fg = palette.text },
-  M.FileIcon,
-  M.FileName,
-  M.FileFlags,
+  hl = { fg = dim_color },
+  -- M.FileIcon,
+  M.FilePath,
+  -- M.FileFlags,
 }
 
 M.TablineFileNameBlock = vim.tbl_extend('force', M.FileNameBlock, {

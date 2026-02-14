@@ -49,14 +49,7 @@ return {
           style = 'bordered',
         },
       },
-      highlight_overrides = {
-        mocha = function(mocha)
-          return {
-            CursorLineNr = { fg = mocha.peach },
-          }
-        end,
-      },
     }
-    -- vim.cmd.colorscheme 'catppuccin'
+    vim.cmd.colorscheme 'catppuccin'
   end,
 }

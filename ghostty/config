@@ -1,42 +1,36 @@
-# Theme
-# theme = Catppuccin Mocha
-theme = Rose Pine
+# Theme & Background
+theme = Catppuccin Mocha
+background-opacity = 0.80
+background-blur = 30
 
-# Shaders
-custom-shader = ./shaders/cursor_warp.glsl
-# custom-shader = ./shaders/ripple_rectangle_cursor.glsl
+# Shader
+# custom-shader = ./shaders/cursor_tail.glsl
 
 # Font
 font-family = "Berkeley Mono Variable"
 font-family = "Maple Mono NF CN"
+font-family = "JetBrains Mono"
 font-size = 18
 # font-thicken = true
-adjust-cell-height = 5%
+# adjust-cell-height = 5%
 # adjust-cell-width = 5%
 
-# Background
-background-opacity = 0.80
-background-blur = 30
-
 # Windows
-# macos-titlebar-style = hidden
-macos-titlebar-style = tabs
+macos-titlebar-style = hidden
 window-save-state = always
 window-colorspace = display-p3
 window-padding-balance = true
 window-padding-x = 5
-window-padding-y = 0
+# window-padding-y = 0
 
-# Cursor-color
+# Shell Integration
+shell-integration = zsh
+shell-integration-features = no-cursor
+
+# Cusor
 cursor-style = block
 cursor-click-to-move = true
-cursor-style-blink = false
-shell-integration-features = no-cursor
+cursor-style-blink = true
 
 # Keys
 macos-option-as-alt = true
-
-keybind = ctrl+`>j=goto_split:bottom
-keybind = ctrl+`>k=goto_split:top
-keybind = ctrl+`>h=goto_split:left
-keybind = ctrl+`>l=goto_split:right

@@ -6,6 +6,7 @@ return {
   components.RightPadding(components.FileNameBlock, 1),
   components.RightPadding(components.Git, 1),
   components.RightPadding(components.Diagnostics, 1),
+  -- components.RightPadding(components.FilePathBlock, 1),
   -- components.RightPadding(components.Overseer, 1),
   components.RightPadding(components.SearchOccurrence, 0),
   components.Fill,

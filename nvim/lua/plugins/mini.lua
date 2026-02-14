@@ -14,8 +14,6 @@ return {
         README = { glyph = '', hl = 'MiniIconsYellow' },
         ['README.md'] = { glyph = '', hl = 'MiniIconsYellow' },
         ['README.txt'] = { glyph = '', hl = 'MiniIconsYellow' },
-        -- README = { glyph = '󰆈', hl = 'MiniIconsYellow' },
-        -- ['README.md'] = { glyph = '󰆈', hl = 'MiniIconsYellow' },
       },
 
       filetype = {
@@ -26,51 +24,6 @@ return {
         -- rust = { glyph = "🦀", hl = "MiniIconsOrange" },
       },
     }
-
-    -- mini.statusline
-    -- require('mini.statusline').setup {
-    --   -- Content of statusline as functions which return statusline string. See
-    --   -- `:h statusline` and code of default contents (used instead of `nil`).
-    --   content = {
-    --     -- Content for active window
-    --     active = nil,
-    --     -- Content for inactive window(s)
-    --     inactive = nil,
-    --   },
-    --
-    --   -- Whether to use icons by default
-    --   use_icons = true,
-    -- }
-    --   require('mini.statusline').setup {
-    --   use_icons = true,
-    --
-    --   content = {
-    --     active = function()
-    --       -- 获取 mode、filename、git 等
-    --       local mode = '%m'  -- 示例：使用 Vim 自带模式标识
-    --       local file = '%f'  -- 当前文件名
-    --       local linecol = '%l:%c'  -- 行:列
-    --       local git_branch = ''   -- 此处可接入 git 插件返回分支名
-    --       if vim.b.gitsigns_head ~= nil then
-    --         git_branch = ' ' .. vim.b.gitsigns_head
-    --       end
-    --
-    --       -- 组合
-    --       return table.concat {
-    --         mode, ' ',
-    --         git_branch, ' ',
-    --         file, ' ',
-    --         '%=',       -- 分隔符，左侧内容与右侧内容平衡
-    --         linecol,
-    --       }
-    --     end,
-    --
-    --     inactive = function()
-    --       -- 简化的状态栏，仅显示文件名
-    --       return '%f'
-    --     end,
-    --   },
-    -- }
 
     -- mini.tabline
     require('mini.tabline').setup {

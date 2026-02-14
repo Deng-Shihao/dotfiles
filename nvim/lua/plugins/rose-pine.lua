@@ -1,8 +1,8 @@
 -- lua/plugins/rose-pine.lua
 return {
   'rose-pine/neovim',
-  -- enabled = false,
   lazy = false,
+  enabled = false,
   name = 'rose-pine',
   config = function()
     require('rose-pine').setup {
@@ -12,6 +12,6 @@ return {
         transparency = true,
       },
     }
-    vim.cmd 'colorscheme rose-pine'
+    -- vim.cmd 'colorscheme rose-pine'
   end,
 }

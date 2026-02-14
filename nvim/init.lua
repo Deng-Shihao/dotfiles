@@ -7,6 +7,3 @@ require 'config.autocmds'
 
 -- globals for icons
 require 'globals'
-
--- ui for statusline & tabline
--- require 'ui'
