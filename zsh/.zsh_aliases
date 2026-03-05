@@ -8,6 +8,7 @@ if [[ -x $(command -v eza) ]]; then
   alias l.='eza -a'
   alias ls='eza -F --sort=type --icons=always'
   alias ll='eza -aF --long --sort=type --icons=always'
+  alias lt4='eza -lT -L4 --icons'
 else
   alias ls='ls -F --color=auto'
   alias ll='ls -alhF --color=auto'

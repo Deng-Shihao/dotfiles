@@ -67,3 +67,8 @@ eval "$(fzf --zsh)"
 eval "$(zoxide init --cmd cd zsh)"
 
 # zprof
+
+# Added by LM Studio CLI (lms)
+export PATH="$PATH:/Users/dsh/.lmstudio/bin"
+# End of LM Studio CLI section
+

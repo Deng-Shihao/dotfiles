@@ -1,7 +1,7 @@
 # Theme & Background
 theme = Catppuccin Mocha
 background-opacity = 0.80
-background-blur = 30
+background-blur = 10
 
 # Shader
 # custom-shader = ./shaders/cursor_tail.glsl
@@ -9,19 +9,18 @@ background-blur = 30
 # Font
 font-family = "Berkeley Mono Variable"
 font-family = "Maple Mono NF CN"
-font-family = "JetBrains Mono"
-font-size = 18
+font-size = 15
 # font-thicken = true
-# adjust-cell-height = 5%
+adjust-cell-height = 10%
 # adjust-cell-width = 5%
 
 # Windows
-macos-titlebar-style = hidden
+macos-titlebar-style = tabs
 window-save-state = always
 window-colorspace = display-p3
 window-padding-balance = true
-window-padding-x = 5
-# window-padding-y = 0
+# window-padding-x = 5
+# window-padding-y = 5
 
 # Shell Integration
 shell-integration = zsh

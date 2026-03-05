@@ -1,6 +1,0 @@
-WRN 2025-11-11T21:59:30.496 ?.36821    server_start:199: Failed to start server: operation not permitted: /var/folders/fq/8y8z7g8n0h59289v7cd8s6zw0000gn/T/nvim.dsh/JS88Gu/nvim.36821.0
-WRN 2025-11-11T21:59:30.527 ?.36821    server_start:199: Failed to start server: operation not permitted: /var/folders/fq/8y8z7g8n0h59289v7cd8s6zw0000gn/T/nvim.dsh/JS88Gu/fzf-lua.1762898370.36821.1
-WRN 2025-11-11T21:59:40.387 ?.36828    server_start:199: Failed to start server: operation not permitted: /var/folders/fq/8y8z7g8n0h59289v7cd8s6zw0000gn/T/nvim.dsh/728oe7/nvim.36828.0
-WRN 2025-11-11T22:01:52.816 ?.38342    server_start:199: Failed to start server: operation not permitted: /var/folders/fq/8y8z7g8n0h59289v7cd8s6zw0000gn/T/nvim.dsh/bupHXJ/nvim.38342.0
-WRN 2025-11-11T22:01:52.848 ?.38342    server_start:199: Failed to start server: operation not permitted: /var/folders/fq/8y8z7g8n0h59289v7cd8s6zw0000gn/T/nvim.dsh/bupHXJ/fzf-lua.1762898512.38342.1
-WRN 2025-11-11T22:04:12.135 ?.39278    server_start:199: Failed to start server: operation not permitted: /var/folders/fq/8y8z7g8n0h59289v7cd8s6zw0000gn/T/nvim.dsh/dxWuO1/nvim.39278.0

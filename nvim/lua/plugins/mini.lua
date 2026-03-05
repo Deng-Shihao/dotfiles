@@ -21,7 +21,6 @@ return {
         bash = { glyph = '󱆃', hl = 'MiniIconsGreen' },
         sh = { glyph = '󱆃', hl = 'MiniIconsGrey' },
         toml = { glyph = '󱄽', hl = 'MiniIconsOrange' },
-        -- rust = { glyph = "🦀", hl = "MiniIconsOrange" },
       },
     }
 

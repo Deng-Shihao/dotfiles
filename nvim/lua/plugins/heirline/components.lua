@@ -1,4 +1,5 @@
 local palette = require('catppuccin.palettes').get_palette 'mocha'
+
 local utils = require 'heirline.utils'
 local conditions = require 'heirline.conditions'
 local icons = require 'plugins.heirline.icons'
@@ -14,22 +15,6 @@ local colors = {
 }
 
 local dim_color = palette.surface1
-
--- overseer
--- local function OverseerTasksForStatus(st)
---   return {
---     condition = function(self)
---       return self.tasks[st]
---     end,
---     provider = function(self) return string.format('%s%d', self.symbols[st], #self.tasks[st])
---     end,
---     hl = function(_)
---       return {
---         fg = utils.get_highlight(string.format('Overseer%s', st)).fg,
---       }
---     end,
---   }
--- end
 
 local M = {}
 M.Spacer = { provider = ' ' }
@@ -141,13 +126,16 @@ M.Mode = {
       t = palette.blue,
     },
   },
+
   provider = function(self)
     return ' ' .. '%1(' .. self.mode_names[self.mode] .. '%)' .. ' ▍'
   end,
+
   hl = function(self)
     local mode = self.mode:sub(1, 1) -- get only the first mode character
     return { fg = palette.base, bg = self.mode_colors[mode], bold = true }
   end,
+
   update = {
     'ModeChanged',
     pattern = '*:*',
@@ -157,6 +145,7 @@ M.Mode = {
   },
 }
 
+-- MacroRecording
 M.MacroRecording = {
   condition = conditions.is_active,
   init = function(self)
@@ -181,7 +170,7 @@ M.MacroRecording = {
     hl = { fg = palette.text, bg = palette.base },
   },
   update = { 'RecordingEnter', 'RecordingLeave' },
-} -- MacroRecording
+}
 
 M.Formatters = {
   condition = function(self)
@@ -310,7 +299,6 @@ M.Git = {
     end,
     hl = { fg = palette.yellow },
   },
-
   {
     condition = function(self)
       return self.has_changes
@@ -406,7 +394,8 @@ M.FileIcon = {
     return self.icon_color and { fg = self.icon_color } or { fg = dim_color }
   end,
 }
--- we redefine the filename component, as we probably only want the tail and not the relative path
+
+-- We redefine the filename component, as we probably only want the tail and not the relative path
 M.FileName = {
   init = function(self)
     self.is_modified = vim.api.nvim_get_option_value('modified', { buf = self.bufnr })
@@ -498,29 +487,6 @@ M.FileFlags = {
   },
 }
 
--- M.Overseer = {
---   condition = function()
---     return package.loaded.overseer
---   end,
---   init = function(self)
---     local tasks = require('overseer.task_list').list_tasks { unique = true }
---     local tasks_by_status = require('overseer.util').tbl_group_by(tasks, 'status')
---     self.tasks = tasks_by_status
---   end,
---   static = {
---     symbols = {
---       ['CANCELED'] = ' 􀕧 ',
---       ['FAILURE'] = ' 􀁐 ',
---       ['SUCCESS'] = ' 􀁢 ',
---       ['RUNNING'] = ' 􁾤 ',
---     },
---   },
---   M.RightPadding(OverseerTasksForStatus 'CANCELED'),
---   M.RightPadding(OverseerTasksForStatus 'RUNNING'),
---   M.RightPadding(OverseerTasksForStatus 'SUCCESS'),
---   M.RightPadding(OverseerTasksForStatus 'FAILURE'),
--- }
-
 M.FileNameBlock = {
   init = function(self)
     local bufnr = self.bufnr and self.bufnr or 0
@@ -588,6 +554,45 @@ M.SimpleIndicator = {
   hl = { fg = palette.sky },
   provider = '',
 }
+
+-- M.Overseer = {
+--   condition = function()
+--     return package.loaded.overseer
+--   end,
+--   init = function(self)
+--     local tasks = require('overseer.task_list').list_tasks { unique = true }
+--     local tasks_by_status = require('overseer.util').tbl_group_by(tasks, 'status')
+--     self.tasks = tasks_by_status
+--   end,
+--   static = {
+--     symbols = {
+--       ['CANCELED'] = ' 􀕧 ',
+--       ['FAILURE'] = ' 􀁐 ',
+--       ['SUCCESS'] = ' 􀁢 ',
+--       ['RUNNING'] = ' 􁾤 ',
+--     },
+--   },
+--   M.RightPadding(OverseerTasksForStatus 'CANCELED'),
+--   M.RightPadding(OverseerTasksForStatus 'RUNNING'),
+--   M.RightPadding(OverseerTasksForStatus 'SUCCESS'),
+--   M.RightPadding(OverseerTasksForStatus 'FAILURE'),
+-- }
+
+-- overseer
+-- local function OverseerTasksForStatus(st)
+--   return {
+--     condition = function(self)
+--       return self.tasks[st]
+--     end,
+--     provider = function(self) return string.format('%s%d', self.symbols[st], #self.tasks[st])
+--     end,
+--     hl = function(_)
+--       return {
+--         fg = utils.get_highlight(string.format('Overseer%s', st)).fg,
+--       }
+--     end,
+--   }
+-- end
 
 -- M.LspProgress = {
 --   provider = function()

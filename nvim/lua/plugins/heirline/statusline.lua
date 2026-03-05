@@ -9,9 +9,11 @@ return {
   -- components.RightPadding(components.FilePathBlock, 1),
   -- components.RightPadding(components.Overseer, 1),
   components.RightPadding(components.SearchOccurrence, 0),
+
   components.Fill,
   components.MacroRecording,
   components.Fill,
+
   components.RightPadding(components.ShowCmd),
   components.RightPadding(components.LSPActive),
   -- components.RightPadding(components.LspProgress, 1),
