@@ -72,3 +72,5 @@ eval "$(zoxide init --cmd cd zsh)"
 export PATH="$PATH:/Users/dsh/.lmstudio/bin"
 # End of LM Studio CLI section
 
+# OpenClaw Completion
+source "/Users/dsh/.openclaw/completions/openclaw.zsh"

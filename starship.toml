@@ -44,7 +44,7 @@ format = '[$path]($style) '
 truncation_length = 3
 
 [character]
-success_symbol = '[➔](bold green)'
+# success_symbol = '[➔](bold green)'
 error_symbol = '[✘](bold red)'
 vimcmd_symbol = '[V](bold green)'
 

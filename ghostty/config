@@ -4,18 +4,18 @@ background-opacity = 0.80
 background-blur = 10
 
 # Shader
-# custom-shader = ./shaders/cursor_tail.glsl
+custom-shader = ./shaders/cursor_tail.glsl
 
 # Font
-font-family = "Berkeley Mono Variable"
+font-family = "JetBrains Mono"
 font-family = "Maple Mono NF CN"
 font-size = 15
 # font-thicken = true
-adjust-cell-height = 10%
+# adjust-cell-height = 10%
 # adjust-cell-width = 5%
 
 # Windows
-macos-titlebar-style = tabs
+# macos-titlebar-style = tabs
 window-save-state = always
 window-colorspace = display-p3
 window-padding-balance = true
