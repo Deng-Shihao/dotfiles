@@ -9,7 +9,7 @@ custom-shader = ./shaders/cursor_tail.glsl
 # Font
 font-family = "JetBrains Mono"
 font-family = "Maple Mono NF CN"
-font-size = 14
+font-size = 16
 # font-thicken = true
 # adjust-cell-height = 10%
 # adjust-cell-width = 5%
