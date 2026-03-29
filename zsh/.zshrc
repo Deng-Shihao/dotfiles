@@ -1,6 +1,6 @@
 # .zshrc
 # @author deng
-# since 2024 2025
+# since 2024 2025 2026
 
 # zmodload zsh/zprof
 
@@ -71,6 +71,3 @@ eval "$(zoxide init --cmd cd zsh)"
 # Added by LM Studio CLI (lms)
 export PATH="$PATH:/Users/dsh/.lmstudio/bin"
 # End of LM Studio CLI section
-
-# OpenClaw Completion
-source "/Users/dsh/.openclaw/completions/openclaw.zsh"

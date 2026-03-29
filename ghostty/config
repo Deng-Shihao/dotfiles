@@ -1,7 +1,7 @@
 # Theme & Background
 theme = Catppuccin Mocha
-background-opacity = 0.40
-background-blur = macos-glass-regular
+background-opacity = 0.85
+background-blur = 30
 
 # Shader
 custom-shader = ./shaders/cursor_tail.glsl
@@ -9,13 +9,13 @@ custom-shader = ./shaders/cursor_tail.glsl
 # Font
 font-family = "JetBrains Mono"
 font-family = "Maple Mono NF CN"
-font-size = 16
+font-size = 14
 # font-thicken = true
-# adjust-cell-height = 10%
+# adjust-cell-height = 5%
 # adjust-cell-width = 5%
 
 # Windows
-macos-titlebar-style = tabs
+# macos-titlebar-style = tabs
 window-save-state = always
 window-colorspace = display-p3
 window-padding-balance = true

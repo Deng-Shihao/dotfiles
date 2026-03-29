@@ -1,4 +1,5 @@
 {
+    "global": { "show_in_menu_bar": false },
     "profiles": [
         {
             "complex_modifications": {
@@ -72,16 +73,6 @@
                     }
                 ]
             },
-            "devices": [
-                {
-                    "identifiers": {
-                        "device_address": "f1-df-33-b6-ac-d9",
-                        "is_keyboard": true,
-                        "is_pointing_device": true
-                    },
-                    "ignore": false
-                }
-            ],
             "name": "Default profile",
             "selected": true,
             "virtual_hid_keyboard": { "keyboard_type_v2": "ansi" }
