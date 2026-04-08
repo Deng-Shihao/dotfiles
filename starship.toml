@@ -36,8 +36,8 @@ base = "#1e1e2e"
 mantle = "#181825"
 crust = "#11111b"
 
-[line_break]
-disabled = true
+# [line_break]
+# disabled = true
 
 [os]
 disabled = false
@@ -48,7 +48,7 @@ format = '[$path]($style) '
 truncation_length = 3
 
 [character]
-# success_symbol = '[➔](bold green)'
+success_symbol = '[➔](bold green)'
 error_symbol = '[✘](bold red)'
 vimcmd_symbol = '[V](bold green)'
 
