@@ -1,7 +1,7 @@
 # Theme & Background
 theme = Catppuccin Mocha
 background-opacity = 0.95
-background-blur = 20
+background-blur = 30
 
 # Shader
 custom-shader = ./shaders/cursor_warp.glsl
@@ -15,7 +15,7 @@ adjust-cell-height = 5%
 adjust-cell-width = 5%
 
 # Windows
-macos-titlebar-style = tabs
+# macos-titlebar-style = tabs
 window-save-state = always
 window-colorspace = display-p3
 window-padding-balance = true
